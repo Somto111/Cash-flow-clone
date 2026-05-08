@@ -14,28 +14,70 @@ function App() {
         <img src="./src/assets/Image wrap.png" alt="wrap"  class="px-2"/>
       </section>
 
-      <section className='bg-amber-700 bg-linear-to-r from-blue-500 via-indigo-600 to-purple-500 '>
-        <p>my name is John Doe</p>
-        <p>my name is John Doe</p>
-        <p>my name is John Doe</p>
+      <section className='relative h-screen overflow-hidden bg-blue-100 flex flex-col align-middle items-center p-2'>
+        <div className='absolute left-10  h-72 w-72 md:left-90  rotate-1 rounded-tl-full rounded-br-full bg-blue-300/50 blur-xl'></div>
+        <div className='absolute right-10 top-110 h-72 w-72 md:right-90 rotate-1 rounded-tl-full rounded-br-full bg-blue-300/50 blur-xl'></div>
+        <div className='absolute bottom-10 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-pink-300/30 blur-[120px]'></div>
+
+        <nav className='flex justify-around align-middle p-1 backdrop-blur-sm mt-3 bg-blue-300/30 mb-15'>
+          <div className='flex justify-around gap-25 rounded-sm bg-white p-1 '>
+            <img src="/src/assets/cycle.svg" alt="" className='w-3' />
+            <ul className='flex gap-5 text-sm'>
+              <li>Updates</li>
+              <li>Faq</li>
+              <li>Contact Us</li>
+            </ul>
+            <img src="/src/assets/sunshine.svg" alt="" className='w-3'/>
+          </div>
+          
+        </nav>
+
+        <div className='flex p-1 border-blue-300 bg-blue-300/30 w-45 mb-1'>
+          <div className='backdrop-blur-sm bg-white rounded-lg p-1 text-sm w-50 flex justify-between px-2'><h6>Waitlist v1</h6> <h6>Coming soon</h6></div>
+        </div>
+        
+
+        <p className='backdrop-blur-sm text-4xl md:text-6xl md:w-3xl font-bold text-center mb-4'>The software that sparks your imagination</p>
+        <p className='backdrop-blur-sm text-center mb-4 md:w-2xl'>Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
+        <div className='backdrop-blur-sm flex flex-col gap-3 bg-blue-300/30 p-2 m-5 w-60'>
+          <div className='bg-white rounded-sm p-1 flex '>
+            <img src="/src/assets/envelope.svg" alt=""  className='w-5 mr-1.5' />
+            <input type="email" placeholder='Your email..' className='px-1'></input>
+          </div>
+          
+          <button className='bg-black text-white rounded-sm text-sm p-1'>Join the waitlist</button>
+        </div>
+
+        <div className='backdrop-blur-sm'>
+
+        <div className='flex relative right-10 justify-center items-center align-middle'>
+          <img src="/src/assets/avatar.png" alt=""  className='w-10 h-10 absolute left-5 '/>
+          <img src="/src/assets/avatar.png" alt="" className='w-10 h-10 absolute left-10 '/>
+          <img src="/src/assets/avatar.png" alt="" className='w-10 h-10 absolute left-15'/>
+          <img src="/src/assets/avatar.png" alt="" className='w-10 h-10 absolute left-20'/>
+          <img src="/src/assets/avatar.png" alt="" className='w-10 h-10 '/>
+        </div>
+
+        </div>
+        <p className='backdrop-blur-sm'>Join the <strong>2000+</strong> members who have already signed up</p>
       </section>
 
-      <section className='grid md:grid-cols-2'>
+      <section className='grid md:grid-cols-2 font-playfair'>
           
           <section className="bg-[url('/src/assets/house.jpg')] bg-cover  bg-[22%_center] md:bg-[1%_center] bg-no-repeat h-screen relative  ">
             <div className="absolute inset-0 bg-black/40"></div>
             
-            <div className='relative z-10 '>
-              <h1 className='text-3xl  text-blue-700 font-extrabold p-5'>June Homes</h1>
+            <div className='relative z-10 p-20'>
+              <h1 className='text-3xl  text-white font-extrabold p-5'>June Homes</h1>
               <div className='flex flex-col p-5'>
-                <p className='text-3xl  text-blue-700 font-extrabold '>Nothing fits?</p>
-                <p className='text-3xl  text-blue-700 font-extrabold mb-4 '>Here's the waitlist</p>
-                <p>Tell us what kind of home you need and we'll reach you when it becomes available</p>
+                <p className='text-3xl  text-white font-extrabold '>Nothing fits?</p>
+                <p className='text-3xl  text-white font-extrabold mb-4 '>Here's the waitlist</p>
+                <p className="text-white">Tell us what kind of home you need and we'll reach you when it becomes available</p>
               </div>
             </div>
             
           </section>
-          <section className='juneWaitlist p-7'>
+          <section className='juneWaitlist p-7 font-playfair'>
               <ul className='flex justify-around gap-1.5 mb-10'>
                 <li>Promotions</li>
                 <li>FaQs</li>
