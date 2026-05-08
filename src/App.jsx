@@ -1,10 +1,20 @@
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
+  const [darkmode, setDarkMode] = useState(false);
+
+  useEffect(() =>{
+    if (darkmode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkmode]);
 
   return (
     <>
-      <section class="bg-black  ">
+      <section class="bg-black ">
         <div class="p-4 flex justify-between items-center   py-10 w-11/12  ">
           <img src="./src/assets/Group 214.png" alt="hero" class="w-10 relative bottom-8" />
           <p className='text-amber-50 items-center text-2xl'>20+ SaaS Waitlist <br/>  Landing Page Examples</p>
@@ -14,33 +24,35 @@ function App() {
         <img src="./src/assets/Image wrap.png" alt="wrap"  class="px-2"/>
       </section>
 
-      <section className='relative h-screen overflow-hidden bg-blue-100 flex flex-col align-middle items-center p-2'>
+      <section className='relative h-screen overflow-hidden bg-blue-100 dark:bg-black flex flex-col align-middle items-center p-2'>
         <div className='absolute left-10  h-72 w-72 md:left-90  rotate-1 rounded-tl-full rounded-br-full bg-blue-300/50 blur-xl'></div>
         <div className='absolute right-10 top-110 h-72 w-72 md:right-90 rotate-1 rounded-tl-full rounded-br-full bg-blue-300/50 blur-xl'></div>
         <div className='absolute bottom-10 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-pink-300/30 blur-[120px]'></div>
 
         <nav className='flex justify-around align-middle p-1 backdrop-blur-sm mt-3 bg-blue-300/30 mb-15'>
-          <div className='flex justify-around gap-25 rounded-sm bg-white p-1 '>
+          <div className='flex justify-around gap-25 rounded-sm bg-white dark:bg-black p-1 '>
             <img src="/src/assets/cycle.svg" alt="" className='w-3' />
-            <ul className='flex gap-5 text-sm'>
+            <ul className='flex gap-5 text-sm dark:text-white'>
               <li>Updates</li>
               <li>Faq</li>
               <li>Contact Us</li>
             </ul>
-            <img src="/src/assets/sunshine.svg" alt="" className='w-3'/>
+            <button onClick={() => setDarkMode(!darkmode)}> 
+              <img src="/src/assets/sunshine.svg" alt="" className='w-3' />
+            </button>
           </div>
           
         </nav>
 
         <div className='flex p-1 border-blue-300 bg-blue-300/30 w-45 mb-1'>
-          <div className='backdrop-blur-sm bg-white rounded-lg p-1 text-sm w-50 flex justify-between px-2'><h6>Waitlist v1</h6> <h6>Coming soon</h6></div>
+          <div className='backdrop-blur-sm bg-white rounded-lg p-1 text-sm w-50 flex justify-between px-2 dark:bg-black dark:text-white'><h6>Waitlist v1</h6> <h6>Coming soon</h6></div>
         </div>
         
 
-        <p className='backdrop-blur-sm text-4xl md:text-6xl md:w-3xl font-bold text-center mb-4'>The software that sparks your imagination</p>
-        <p className='backdrop-blur-sm text-center mb-4 md:w-2xl'>Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
+        <p className='backdrop-blur-sm text-4xl md:text-6xl md:w-3xl font-bold text-center mb-4 dark:text-white'>The software that sparks your imagination</p>
+        <p className='backdrop-blur-sm text-center mb-4 md:w-2xl dark:text-white'>Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
         <div className='backdrop-blur-sm flex flex-col gap-3 bg-blue-300/30 p-2 m-5 w-60'>
-          <div className='bg-white rounded-sm p-1 flex '>
+          <div className='bg-white rounded-sm p-1 flex  dark:bg-black dark:text-white'>
             <img src="/src/assets/envelope.svg" alt=""  className='w-5 mr-1.5' />
             <input type="email" placeholder='Your email..' className='px-1'></input>
           </div>
@@ -59,7 +71,7 @@ function App() {
         </div>
 
         </div>
-        <p className='backdrop-blur-sm'>Join the <strong>2000+</strong> members who have already signed up</p>
+        <p className='backdrop-blur-sm dark:text-white'>Join the <strong>2000+</strong> members who have already signed up</p>
       </section>
 
       <section className='grid md:grid-cols-2 font-playfair'>
@@ -158,4 +170,7 @@ function App() {
   )
 }
 
+
+
 export default App
+
