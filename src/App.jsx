@@ -14,14 +14,14 @@ function App() {
 
   return (
     <>
-      <section class="bg-black ">
+      <section class="bg-black h-100 md:h-screen ">
         <div class="p-4 flex justify-between items-center   py-10 w-11/12  ">
-          <img src="./src/assets/Group 214.png" alt="hero" class="w-10 relative bottom-8" />
+          <img src={`${import.meta.env.BASE_URL}images/Group 214.png`} alt="hero" class="w-10 relative bottom-8" />
           <p className='text-amber-50 items-center text-2xl'>20+ SaaS Waitlist <br/>  Landing Page Examples</p>
-          <img src="./src/assets/Figma.png" alt="figma" className='w-7'/>
+          <img src={`${import.meta.env.BASE_URL}images/Figma.png`} alt="figma" className='w-7'/>
         </div>
         
-        <img src="./src/assets/Image wrap.png" alt="wrap"  class="px-2"/>
+        <img src={`${import.meta.env.BASE_URL}images/Image wrap.png`} alt="wrap"  className="px-2 absolute top-67 md:top-78"/>
       </section>
 
       <section className='relative h-screen overflow-hidden bg-blue-100 dark:bg-black flex flex-col align-middle items-center p-2'>
@@ -31,14 +31,14 @@ function App() {
 
         <nav className='flex justify-around align-middle p-1 backdrop-blur-sm mt-3 bg-blue-300/30 mb-15'>
           <div className='flex justify-around gap-25 rounded-sm bg-white dark:bg-black p-1 '>
-            <img src="/src/assets/cycle.svg" alt="" className='w-3' />
+            <img src={`${import.meta.env.BASE_URL}images/cycle.svg`} alt="" className='w-3' />
             <ul className='flex gap-5 text-sm dark:text-white'>
               <li>Updates</li>
               <li>Faq</li>
               <li>Contact Us</li>
             </ul>
             <button onClick={() => setDarkMode(!darkmode)}> 
-              <img src="/src/assets/sunshine.svg" alt="" className='w-3' />
+              <img src={`${import.meta.env.BASE_URL}images/sunshine.svg`} alt="" className='w-3' />
             </button>
           </div>
           
@@ -53,7 +53,7 @@ function App() {
         <p className='backdrop-blur-sm text-center mb-4 md:w-2xl dark:text-white'>Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
         <div className='backdrop-blur-sm flex flex-col gap-3 bg-blue-300/30 p-2 m-5 w-60'>
           <div className='bg-white rounded-sm p-1 flex  dark:bg-black dark:text-white'>
-            <img src="/src/assets/envelope.svg" alt=""  className='w-5 mr-1.5' />
+            <img src={`${import.meta.env.BASE_URL}images/envelope.svg`} alt=""  className='w-5 mr-1.5' />
             <input type="email" placeholder='Your email..' className='px-1'></input>
           </div>
           
@@ -63,11 +63,11 @@ function App() {
         <div className='backdrop-blur-sm'>
 
         <div className='flex relative right-10 justify-center items-center align-middle'>
-          <img src="/src/assets/avatar.png" alt=""  className='w-10 h-10 absolute left-5 '/>
-          <img src="/src/assets/avatar.png" alt="" className='w-10 h-10 absolute left-10 '/>
-          <img src="/src/assets/avatar.png" alt="" className='w-10 h-10 absolute left-15'/>
-          <img src="/src/assets/avatar.png" alt="" className='w-10 h-10 absolute left-20'/>
-          <img src="/src/assets/avatar.png" alt="" className='w-10 h-10 '/>
+          <img src={`${import.meta.env.BASE_URL}images/avatar.png`} alt=""  className='w-10 h-10 absolute left-5 '/>
+          <img src={`${import.meta.env.BASE_URL}images/avatar.png`} alt="" className='w-10 h-10 absolute left-10 '/>
+          <img src={`${import.meta.env.BASE_URL}images/avatar.png`} alt="" className='w-10 h-10 absolute left-15'/>
+          <img src={`${import.meta.env.BASE_URL}images/avatar.png`} alt="" className='w-10 h-10 absolute left-20'/>
+          <img src={`${import.meta.env.BASE_URL}images/avatar.png`} alt="" className='w-10 h-10 '/>
         </div>
 
         </div>
@@ -76,7 +76,7 @@ function App() {
 
       <section className='grid md:grid-cols-2 font-playfair'>
           
-          <section className="bg-[url('/src/assets/house.jpg')] bg-cover  bg-[22%_center] md:bg-[1%_center] bg-no-repeat h-screen relative  ">
+          <section className="bg-[url('/src/assets/house.jpg')] bg-cover  bg-position-[22%_center] md:bg-position-[1%_center] bg-no-repeat h-screen relative  ">
             <div className="absolute inset-0 bg-black/40"></div>
             
             <div className='relative z-10 p-20'>
