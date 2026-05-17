@@ -163,7 +163,24 @@ function App() {
              </form>
 
 
+          </section>
       </section>
+
+
+      <section className='flex flex-col items-center justify-center p-8 bg-gradient-to-br from-blue-50 via-green-50 to-blue-100 h-screen'>
+        <img src={`${import.meta.env.BASE_URL}images/diamondshine.png`} alt="" className='w-50' />
+        <h1 className='text-3xl font-bold text-center mb-3'>Join the waitlist for <br /> <strong className='text-green-200 '>CashFlow</strong> </h1>
+        <p className='text-sm text-center'>Stay informed about our latest updates</p>
+        <input type="text" placeholder='Your Name' className='bg-white mt-5 mb-3 py-1.5 px-3 w-70 rounded-sm text-sm'/>
+        <input type="email" placeholder='Your Email'className='bg-white mb-4 py-1.5 px-3 w-70 rounded-sm text-sm' />
+        <button className='bg-black text-white px-12 py-2 rounded-sm text-sm w-70 mb-5'>Join the Waitlist</button>
+        <div className="flex gap-4 mt-5">
+          <img src={`${import.meta.env.BASE_URL}images/twitter (1).png`} alt="" className='w-5 h-5' />
+          <img src={`${import.meta.env.BASE_URL}images/facebook (1).png`} alt="" className='w-5 h-5' />
+          <img src={`${import.meta.env.BASE_URL}images/instagram (1).png`} alt="" className='w-5 h-5' />
+          <img src={`${import.meta.env.BASE_URL}images/linkedin (1).png`} alt="" className='w-5 h-5' />
+          <img src={`${import.meta.env.BASE_URL}images/youtube.png`} alt="" className='w-5 h-5' />
+        </div>
       </section>
       
     </>
